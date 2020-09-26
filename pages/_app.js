@@ -1,5 +1,5 @@
 import { ThemeProvider, CssBaseline } from "@material-ui/core";
-import theme from "../src/theme";
+import theme from "../styles/theme";
 import { Header } from "../src/components";
 
 const MyApp = ({ Component, pageProps }) => {
