@@ -1,18 +1,31 @@
-import { Box, Typography } from "@material-ui/core";
+import { makeStyles, Grid, Typography } from "@material-ui/core";
+
+const useStyles = makeStyles((theme) => ({
+  footerStyles: {
+    backgroundColor: theme.palette.primary.main,
+  },
+  textContainer: {
+    height: 200,
+  },
+}));
 
 export const Footer = () => {
+  const classes = useStyles();
+
   return (
-    <Box
-      component="footer"
-      py={5}
-      mt={{ xs: 10, sm: 13, md: 15 }}
-      bgcolor="primary.main"
-    >
-      <Box color="background.paper">
-        <Typography align="center">
-          © 2013 - {new Date().getFullYear()}, Stone Innovations Enterprise
-        </Typography>
-      </Box>
-    </Box>
+    <footer className={classes.footerStyles}>
+      <Grid
+        container
+        justify="center"
+        alignItems="center"
+        className={classes.textContainer}
+      >
+        <Grid item>
+          <Typography align="center">
+            © 2013 - {new Date().getFullYear()}, Stone Innovations Enterprise
+          </Typography>
+        </Grid>
+      </Grid>
+    </footer>
   );
 };
