@@ -3,6 +3,7 @@ import { makeStyles, Typography } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   h2Styles: {
     marginBottom: theme.spacing(6),
+    fontWeight: 500,
   },
 }));
 
