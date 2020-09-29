@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const Hero = ({ image, imageText, title, description }) => {
+export const Hero = ({ image, imageText, title, description, CTA1, CTA2 }) => {
   const classes = useStyles();
 
   return (
@@ -53,7 +53,7 @@ export const Hero = ({ image, imageText, title, description }) => {
         className={classes.overlay}
       >
         <Grid item className={classes.textContainer}>
-          <Typography variant="h1" color="secondary" gutterBottom>
+          <Typography variant="h1" color="primary" gutterBottom>
             {title}
           </Typography>
           <Typography
@@ -70,10 +70,10 @@ export const Hero = ({ image, imageText, title, description }) => {
             size="large"
             className={classes.buttonStyles}
           >
-            Main CTA
+            {CTA1}
           </Button>
           <Button variant="outlined" color="secondary" size="large">
-            secondary CTA
+            {CTA2}
           </Button>
         </Grid>
       </Grid>
