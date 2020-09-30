@@ -1,5 +1,6 @@
 import { makeStyles, Grid, Typography, Paper } from "@material-ui/core";
 import { Hero } from "../src/components";
+import { StoneCard } from "../src/components/StoneCard";
 import { H2, SectionWrapper, MediumWrapper } from "../src/elements";
 
 const useStyles = makeStyles((theme) => ({
@@ -68,6 +69,39 @@ const Home = () => {
             ></iframe>
           </Grid>
         </Paper>
+      </MediumWrapper>
+
+      <MediumWrapper>
+        <H2>Stone Types</H2>
+        <Grid container justify="center" spacing={2}>
+          <Grid item xs={12} sm={6} md={4}>
+            <StoneCard
+              stone="Granite"
+              linkURL="/granite-slab"
+              stoneDescription="7 popular shades to choose from"
+              imgSource="/blue-pearl.JPG"
+              altText="Granite Blue Pearl"
+            />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <StoneCard
+              stone="Quartz Stone"
+              linkURL="/quartz-stone-slab"
+              stoneDescription="More than 60 colour to choose from"
+              imgSource="/Q3015.jpg"
+              altText="Quartz Stone"
+            />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <StoneCard
+              stone="Caesarstone"
+              linkURL="/caesarstone-slab"
+              stoneDescription="More than 32 colour to choose from"
+              imgSource="/cs5031.jpg"
+              altText="Caesarstone"
+            />
+          </Grid>
+        </Grid>
       </MediumWrapper>
     </>
   );

@@ -32,14 +32,11 @@ export const StoneCard = ({
   const classes = useStyles();
 
   return (
-    <Card
-    // className={classes.root}
-    >
+    <Card>
       <CardActionArea>
         <CardMedia
-          component={Img}
-          fluid={imgSource}
-          alt={altText}
+          image={imgSource}
+          title={altText}
           className={classes.media}
         />
         <CardContent>
@@ -52,8 +49,8 @@ export const StoneCard = ({
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Link>
-          <a href={linkURL} className={classes.linkStyle}>
+        <Link href={linkURL}>
+          <a className={classes.linkStyle}>
             <Button size="large" color="primary">
               See Colour
             </Button>
