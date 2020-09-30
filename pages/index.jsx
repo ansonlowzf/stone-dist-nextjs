@@ -1,6 +1,5 @@
 import { makeStyles, Grid, Typography, Paper } from "@material-ui/core";
-import { Hero } from "../src/components";
-import { StoneCard } from "../src/components/StoneCard";
+import { Hero, StoneCard, CTA } from "../src/components";
 import { H2, SectionWrapper, MediumWrapper } from "../src/elements";
 
 const useStyles = makeStyles((theme) => ({
@@ -65,7 +64,7 @@ const Home = () => {
               scrolling="no"
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullFcreen
+              allowFullScreen
             ></iframe>
           </Grid>
         </Paper>
@@ -102,6 +101,10 @@ const Home = () => {
             />
           </Grid>
         </Grid>
+      </MediumWrapper>
+
+      <MediumWrapper>
+        <CTA />
       </MediumWrapper>
     </>
   );
