@@ -78,7 +78,7 @@ const Home = () => {
               stone="Granite"
               linkURL="/granite-slab"
               stoneDescription="7 popular shades to choose from"
-              imgSource="/blue-pearl.JPG"
+              imgSource="/granite/blue-pearl.JPG"
               altText="Granite Blue Pearl"
             />
           </Grid>
