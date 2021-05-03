@@ -4,14 +4,11 @@ import {
   Hidden,
   IconButton,
   makeStyles,
-  SwipeableDrawer,
   Toolbar,
   Typography,
-  useScrollTrigger,
 } from "@material-ui/core";
-import { Home, Menu } from "@material-ui/icons";
-import { useState } from "react";
-import { ActiveLink } from "./ActiveLink";
+import { Home } from "@material-ui/icons";
+import { ActiveLink, HideOnScroll, SideDrawer } from "../components";
 
 const useStyles = makeStyles((theme) => ({
   toolbarContainer: {
@@ -54,6 +51,7 @@ const useStyles = makeStyles((theme) => ({
 
 const routes = [
   { name: "home", link: "/" },
+  { name: "caesarstone", link: "/caesarstone-slab" },
   { name: "quartz stone", link: "/quartz-stone" },
   { name: "granite", link: "/granite-slab" },
   { name: "contact us", link: "/contact-us" },
@@ -64,7 +62,7 @@ export const Header = () => {
 
   return (
     <>
-      <ElevationScroll>
+      <HideOnScroll>
         <AppBar>
           <Container maxWidth="lg">
             <Toolbar>
@@ -92,78 +90,8 @@ export const Header = () => {
             </Toolbar>
           </Container>
         </AppBar>
-      </ElevationScroll>
+      </HideOnScroll>
       <Toolbar id="back-to-top-anchor" className={classes.toolbarContainer} />
     </>
-  );
-};
-const ElevationScroll = ({ children }) => {
-  const trigger = useScrollTrigger({
-    disableHysteresis: true,
-    threshold: 0,
-  });
-  return React.cloneElement(children, {
-    elevation: trigger ? 4 : 0,
-  });
-};
-const SideDrawer = () => {
-  const classes = useStyles();
-  const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
-  const [state, setState] = useState({ right: false });
-
-  const toggleDrawer = (anchor, open) => (event) => {
-    if (
-      event &&
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
-    ) {
-      return;
-    }
-
-    setState({ ...state, [anchor]: open });
-  };
-
-  const SideDrawerList = (anchor) => (
-    <div
-      className={classes.sideDrawerStyles}
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-    >
-      {routes.map(({ name, link }) => (
-        <Typography
-          display="block"
-          variant="button"
-          key={name}
-          className={classes.sideDrawerLinkContainer}
-        >
-          <ActiveLink activeClassName="active" href={link}>
-            <a className={classes.sideDrawerLink}>{name}</a>
-          </ActiveLink>
-        </Typography>
-      ))}
-    </div>
-  );
-
-  return (
-    <Toolbar className={classes.navContainer}>
-      <IconButton
-        edge="start"
-        aria-label="menu"
-        onClick={toggleDrawer("right", true)}
-      >
-        <Menu fontSize="large" className={classes.menuStyle} />
-      </IconButton>
-      <SwipeableDrawer
-        disableBackdropTransition={!iOS}
-        disableDiscovery={iOS}
-        anchor="right"
-        open={state.right}
-        onOpen={toggleDrawer("right", true)}
-        onClose={toggleDrawer("right", false)}
-      >
-        {SideDrawerList("right")}
-      </SwipeableDrawer>
-    </Toolbar>
   );
 };

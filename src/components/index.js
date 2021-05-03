@@ -4,3 +4,6 @@ export * from "./Footer";
 export * from "./Hero";
 export * from "./CTA";
 export * from "./StoneCard";
+export * from "./HideOnScroll";
+export * from "./ProductDisplay";
+export * from "./SideDrawer";
