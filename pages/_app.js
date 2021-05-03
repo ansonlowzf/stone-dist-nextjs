@@ -1,3 +1,4 @@
+import * as React from "react";
 import { ThemeProvider, CssBaseline } from "@material-ui/core";
 import theme from "../styles/theme";
 import { Header, Footer } from "../src/components";

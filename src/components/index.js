@@ -7,3 +7,4 @@ export * from "./StoneCard";
 export * from "./HideOnScroll";
 export * from "./ProductDisplay";
 export * from "./SideDrawer";
+export * from "./HeroNext";

@@ -1,3 +1,4 @@
+import * as React from "react";
 import { makeStyles, Grid, Typography, Paper } from "@material-ui/core";
 import { Hero, StoneCard, CTA } from "../src/components";
 import { H2, SectionWrapper, MediumWrapper } from "../src/elements";
