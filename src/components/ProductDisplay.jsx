@@ -19,3 +19,22 @@ export const ProductDisplay = ({ imgSrc, stoneName }) => {
     </Grid>
   );
 };
+
+export const ZenstoneSlabDisplay = ({ imgSrc, stoneName }) => {
+  return (
+    <Grid item xs={12} md={6}>
+      <Paper
+        component={Image}
+        src={imgSrc}
+        alt={stoneName}
+        width={800}
+        height={600}
+      />
+      <Grid container justify="center">
+        <Grid item xs={12}>
+          <Typography align="center">{stoneName}</Typography>
+        </Grid>
+      </Grid>
+    </Grid>
+  );
+};

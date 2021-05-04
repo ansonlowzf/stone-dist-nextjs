@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
 const routes = [
   { name: "home", link: "/" },
   { name: "caesarstone", link: "/caesarstone-slab" },
-  { name: "quartz stone", link: "/quartz-stone" },
+  { name: "quartz stone", link: "/quartz-stone-slab" },
   { name: "granite", link: "/granite-slab" },
   { name: "contact us", link: "/contact-us" },
 ];

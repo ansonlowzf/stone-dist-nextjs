@@ -1,7 +1,7 @@
+import { Grid } from "@material-ui/core";
 import * as React from "react";
-import { Container, Grid } from "@material-ui/core";
+import { ContainterLgMt, H2Subtitle, H2Title } from "../elements";
 import { HeroNext, ProductDisplay } from "../src/components";
-import { H2Title, H2Subtitle, ContainterLgMt } from "../elements";
 
 const CaesarstoneSlab = () => {
   return (
