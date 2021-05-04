@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Hero } from "../src/components";
-import { MediumWrapper, H2 } from "../src/elements";
+import { HeroNext, ProductDisplay } from "../src/components";
 import { makeStyles, Paper, Grid } from "@material-ui/core";
+import { ContainterLgMt, H2Title } from "../elements";
 
 const useStyles = makeStyles((theme) => ({
   imageStyles: {
@@ -18,28 +18,45 @@ const graniteSlab = () => {
 
   return (
     <>
-      <Hero
-        image="/blue-pearl1.jpg"
-        imageText="Granite Blue Pearl Kitchen Top"
+      <HeroNext
+        imgSrc="/blue-pearl1.jpg"
+        imgText="Granite Blue Pearl Kitchen Top"
         title="Granite Slab Wholesales"
-        description="Supply Granite Slab in Malaysia"
-        CTA1="Explore"
-        CTA2="Contact Us"
       />
-      <MediumWrapper>
-        <H2 idPath="colour">Colour Shades</H2>
+
+      <ContainterLgMt>
+        <H2Title idPath="colour">Colour &amp; Shades</H2Title>
         <Grid container spacing={2} justify="center">
-          <Grid item xs={12} sm={8}>
-            <Paper
-              className={classes.imageStyles}
-              style={{
-                backgroundImage: `url(/granite/black-galaxy.JPEG)`,
-                height: 250,
-              }}
-            />
-          </Grid>
+          <ProductDisplay
+            imgSrc="/granite/black-galaxy.JPEG"
+            stoneName="Black Galaxy"
+          />
+          <ProductDisplay
+            imgSrc="/granite/blue-pearl.JPG"
+            stoneName="Blue Pearl"
+          />
+          <ProductDisplay
+            imgSrc="/granite/bourbon-grey.JPG"
+            stoneName="Bourbon Grey"
+          />
+          <ProductDisplay
+            imgSrc="/granite/emerald-pearl.JPG"
+            stoneName="Bourbon Grey"
+          />
+          <ProductDisplay
+            imgSrc="/granite/imperial-red.JPG"
+            stoneName="Imperial Red"
+          />
+          <ProductDisplay
+            imgSrc="/granite/white-wave.JPG"
+            stoneName="White Wave"
+          />
+          <ProductDisplay
+            imgSrc="/granite/xan-xi-black.JPEG"
+            stoneName="Xan Xi Black"
+          />
         </Grid>
-      </MediumWrapper>
+      </ContainterLgMt>
     </>
   );
 };

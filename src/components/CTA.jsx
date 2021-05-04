@@ -1,5 +1,5 @@
 import { Avatar, Box, Typography } from "@material-ui/core";
-import { H2 } from "../elements";
+import { H2Title } from "../../elements";
 
 export const CTA = () => {
   return (

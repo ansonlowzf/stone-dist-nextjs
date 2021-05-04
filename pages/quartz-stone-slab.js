@@ -1,11 +1,6 @@
 import { Grid } from "@material-ui/core";
 import * as React from "react";
-import {
-  ContainterLgMt,
-  H2Subtitle,
-  H2Title,
-  ZenstoneDisplay,
-} from "../elements";
+import { ContainterLgMt, H2Title, ZenstoneDisplay } from "../elements";
 import { HeroNext, ZenstoneSlabDisplay } from "../src/components";
 
 const QuartzStoneSlab = () => {
